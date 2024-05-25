@@ -1,31 +1,89 @@
-CREATE OR REPLACE FUNCTION trigger_verifica_ficha_limpa() RETURNS TRIGGER AS $$
-DECLARE processo_count INT;
-BEGIN -- Verifica se o candidato principal é ficha-limpa
-SELECT COUNT(*) INTO processo_count
-FROM processo_judicial
-WHERE acusado = NEW.candidato_principal
-  AND data <= (NEW.ano::TEXT || '-12-31')::DATE
-  AND data >= (NEW.ano::TEXT || '-12-31')::DATE - INTERVAL '5 years';
-IF processo_count > 0 THEN RAISE EXCEPTION 'Indivíduo % não é ficha-limpa para a data %',
-NEW.candidato_principal,
-NEW.ano;
-END IF;
--- Verifica se o candidato vice é ficha-limpa (se houver)
-IF NEW.candidato_vice IS NOT NULL THEN
-SELECT COUNT(*) INTO processo_count
-FROM processo_judicial
-WHERE acusado = NEW.candidato_vice
-  AND data <= (NEW.ano::TEXT || '-12-31')::DATE
-  AND data >= (NEW.ano::TEXT || '-12-31')::DATE - INTERVAL '5 years';
-IF processo_count > 0 THEN RAISE EXCEPTION 'Indivíduo % não é ficha-limpa para a data %',
-NEW.candidato_vice,
-NEW.ano;
-END IF;
-END IF;
-RETURN NEW;
+CREATE OR REPLACE FUNCTION aumentar_membros_equipe_de_apoio()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- Incrementa o número de membros na equipe correspondente
+    UPDATE equipe_de_apoio
+    SET nro_membros = nro_membros + 1
+    WHERE id_equipe = NEW.equipe_de_apoio;
+
+    RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;
-CREATE TRIGGER trigger_candidatura_ficha_limpa BEFORE
-INSERT
-  OR
-UPDATE ON candidatura FOR EACH ROW EXECUTE FUNCTION trigger_verifica_ficha_limpa();
+
+CREATE TRIGGER trigger_aumentar_membros_equipe_de_apoio
+AFTER INSERT ON participantes_equipe_de_apoio
+FOR EACH ROW
+EXECUTE FUNCTION aumentar_membros_equipe_de_apoio();
+
+-- ////////////////////////////////////////////////////////////
+
+CREATE OR REPLACE FUNCTION diminuir_membros_equipe_de_apoio()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- Decrementa o número de membros na equipe correspondente
+    UPDATE equipe_de_apoio
+    SET nro_membros = nro_membros - 1
+    WHERE id_equipe = OLD.equipe_de_apoio;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_diminuir_membros_equipe_de_apoio
+AFTER DELETE ON participantes_equipe_de_apoio
+FOR EACH ROW
+EXECUTE FUNCTION diminuir_membros_equipe_de_apoio();
+
+-- ////////////////////////////////////////////////////////////
+
+CREATE OR REPLACE FUNCTION atualizar_membros_equipe_de_apoio()
+RETURNS TRIGGER AS $$
+BEGIN
+    -- Decrementa o número de membros na equipe antiga
+    UPDATE equipe_de_apoio
+    SET nro_membros = nro_membros - 1
+    WHERE id_equipe = OLD.equipe_de_apoio;
+
+    -- Incrementa o número de membros na nova equipe
+    UPDATE equipe_de_apoio
+    SET nro_membros = nro_membros + 1
+    WHERE id_equipe = NEW.equipe_de_apoio;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_atualizar_membros_equipe_de_apoio
+AFTER UPDATE ON participantes_equipe_de_apoio
+FOR EACH ROW
+WHEN (OLD.equipe_de_apoio <> NEW.equipe_de_apoio)
+EXECUTE FUNCTION atualizar_membros_equipe_de_apoio();
+
+-- ////////////////////////////////////////////////////////////
+
+CREATE OR REPLACE FUNCTION verificar_ficha_limpa()
+RETURNS TRIGGER AS $$
+DECLARE
+    data_limite DATE;
+BEGIN
+    -- Definindo a data limite como 5 anos atrás a partir da data atual
+    data_limite := CURRENT_DATE - INTERVAL '5 years';
+
+    -- Verifica se o CPF do novo candidato tem um processo judicial recente
+    IF EXISTS (
+        SELECT 1
+        FROM processo_judicial
+        WHERE acusado = NEW.cpf
+        AND data > data_limite
+    ) THEN
+        RAISE EXCEPTION 'Não é permitido inserir candidato. Pois o individuo possui um processo judicial recente.';
+    END IF;
+
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_verificar_ficha_limpa
+BEFORE INSERT ON candidato
+FOR EACH ROW
+EXECUTE FUNCTION verificar_ficha_limpa();
