@@ -61,8 +61,20 @@ def query_data(query):
             conn.close()
 
 def main():
-    """Exibe um menu de seleção e executa a consulta escolhida."""
-    queries = extract_queries("./sql/consultas.sql")
+    # """Exibe um menu de seleção e executa a consulta escolhida."""
+    # queries = extract_queries("./sql/consultasTotais.sql")
+
+    print(colored("Escolha se deseja executar as consultas totais ou especificas:", 'yellow'))
+    print(colored("1: Consultas Totais", 'magenta'))
+    print(colored("2: Consultas Específicas", 'magenta'))
+    choiceTipoConsulta = int(input(colored("Digite o número do tipo da consulta: ", 'yellow')))
+    if choiceTipoConsulta == 1:
+        queries = extract_queries("./sql/consultasTotais.sql")
+    elif choiceTipoConsulta == 2:
+        queries = extract_queries("./sql/consultasEspecificas.sql")
+    else:
+        print(colored("Escolha inválida.", 'red'))
+        return
 
     # Exibe as opções de consulta
     print(colored("Selecione uma consulta para executar:", 'yellow'))
