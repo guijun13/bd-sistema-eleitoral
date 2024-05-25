@@ -19,14 +19,14 @@ CREATE TABLE processo_judicial (
 CREATE TABLE partido (
   id_partido SERIAL,
   nome VARCHAR(255) NOT NULL,
-  abreviação VARCHAR(16),
+  abreviacao VARCHAR(16),
   nro_integrantes NUMERIC,
   CONSTRAINT partido_pk PRIMARY KEY (id_partido)
 );
 CREATE TABLE programa_partido (
   id_programa SERIAL,
   partido SERIAL,
-  descrição TEXT,
+  descricao TEXT,
   CONSTRAINT programa_partido_pk PRIMARY KEY (id_programa, partido),
   CONSTRAINT programa_partido_fk FOREIGN KEY (partido) REFERENCES partido(id_partido)
 );
@@ -73,7 +73,7 @@ CREATE TABLE candidatura (
 );
 CREATE TABLE doadores (
   cpf CHAR(11),
-  valor_doação NUMERIC,
+  valor_doacao NUMERIC,
   candidatura SERIAL,
   CONSTRAINT doadores_pk PRIMARY KEY (cpf),
   CONSTRAINT doadores_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf),
@@ -82,8 +82,8 @@ CREATE TABLE doadores (
 CREATE TABLE empresa (
   cnpj CHAR(14),
   nome VARCHAR(255),
-  localização VARCHAR(255),
-  valor_doação NUMERIC,
+  localizacao VARCHAR(255),
+  valor_doacao NUMERIC,
   candidatura SERIAL,
   CONSTRAINT empresa_pk PRIMARY KEY (cnpj),
   CONSTRAINT empresa_fk FOREIGN KEY (candidatura) REFERENCES candidatura(id_candidatura)
