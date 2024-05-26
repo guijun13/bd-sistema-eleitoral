@@ -62,10 +62,6 @@ VALUES
     ('25814736935', 'Caroline Mariana Oliveira', 'Física', '258147371', '1992-09-29', 'Brasileira', '12345678935'),
     ('12345678936', 'Vitor Hugo Souza', 'Física', '123456792', '1984-07-04', 'Brasileira', '98765432136')
     
-
-
-
-
 INSERT INTO processo_judicial (nro_processo, data, acusado)
 VALUES 
     ('0216907846952317854925648', '2014-06-17', '12486525482'), -- Carlos Alberto Santos
