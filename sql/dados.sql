@@ -78,8 +78,6 @@ VALUES
     ('', 'Partido Azul', 'PA', '11'),
     ('', 'Partido Brasileiro Político', 'PBP', '8'),
     ('', 'Partido da Liberdade Cinza', 'PLC', '14'),
-    -- ('', 'Partido da Folha', 'PF', '13'),
-    -- ('', 'Partido Esquerda Libertário', 'PEL', '11');
 
 INSERT INTO programa_partido (id_programa, partido, descrição) -- Preencher
 VALUES 
@@ -87,8 +85,6 @@ VALUES
     ('', 'Partido Azul', 'Um partido que busca o equilíbrio ambiental acima de tudo, bem como o desenvolvimento sustentável!'),
     ('', 'Partido Brasileiro Político', 'Um partido que busca alianças dignas de políticas que vão de encontro aos interesses do Brasil!'),
     ('', 'Partido da Liberdade Cinza', 'Liberdade não deve ser algo intangível, assim como a cor cinza, deve ser comum e igualitária.');
-    -- ('', 'Partido da Folha', 'Um partido que busca transparência acima de tudo, logo, a folha sempre trará a verdade!'),
-    -- ('', 'Partido da Esquerda Libertária', 'Os princípios de Karl nunca foram implantados com seriedade, este nosso interesse!');
 
 INSERT INTO candidato (cpf, vice, partido)
 VALUES 
@@ -191,19 +187,6 @@ VALUES
     ('45612378934', ''),
     ('25814736935', ''), 
     ('12345678936', '');
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
