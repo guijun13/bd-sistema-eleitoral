@@ -17,7 +17,7 @@ CREATE TABLE processo_judicial (
 	acusado CHAR(11),
 
 	CONSTRAINT processo_judicial_pk PRIMARY KEY (nro_processo),
-	CONSTRAINT processo_judicial_fk FOREIGN KEY (acusado) REFERENCES individuo(cpf)
+	CONSTRAINT processo_judicial_fk FOREIGN KEY (acusado) REFERENCES individuo(cpf) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE partido (
@@ -35,7 +35,7 @@ CREATE TABLE programa_partido (
 	descricao TEXT,
 
 	CONSTRAINT programa_partido_pk PRIMARY KEY (id_programa, partido),
-	CONSTRAINT programa_partido_fk FOREIGN KEY (partido) REFERENCES partido(id_partido)
+	CONSTRAINT programa_partido_fk FOREIGN KEY (partido) REFERENCES partido(id_partido) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE candidato (
@@ -44,8 +44,8 @@ CREATE TABLE candidato (
 	partido SERIAL,
 
 	CONSTRAINT candidato_pf PRIMARY KEY (cpf),
-	CONSTRAINT candidato_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf),
-	CONSTRAINT candidato_fk_2 FOREIGN KEY (partido) REFERENCES partido(id_partido)
+	CONSTRAINT candidato_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT candidato_fk_2 FOREIGN KEY (partido) REFERENCES partido(id_partido) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE pleito (
@@ -61,7 +61,7 @@ CREATE TABLE cargo (
 	tipo VARCHAR(9),
 
 	CONSTRAINT cargo_pk PRIMARY KEY (id_cargo),
-	CONSTRAINT cargo_tipo_ck check (tipo in ('Municipal', 'Estadual', 'Federal'))
+	CONSTRAINT cargo_tipo_ck CHECK (tipo in ('Municipal', 'Estadual', 'Federal'))
 );
 
 CREATE TABLE equipe_de_apoio (
@@ -82,11 +82,11 @@ CREATE TABLE candidatura (
 	ano NUMERIC,
 
 	CONSTRAINT candidatura_pk PRIMARY KEY (id_candidatura),
-	CONSTRAINT candidatuta_fk_1 FOREIGN KEY (candidato_principal) REFERENCES candidato(cpf),
-	CONSTRAINT candidatuta_fk_2 FOREIGN KEY (candidato_vice) REFERENCES candidato(cpf),
-	CONSTRAINT candidatuta_fk_3 FOREIGN KEY (cargo) REFERENCES cargo(id_cargo),
-	CONSTRAINT candidatuta_fk_4 FOREIGN KEY (equipe_de_apoio) REFERENCES equipe_de_apoio(id_equipe),
-	CONSTRAINT candidatuta_fk_5 FOREIGN KEY (pleito) REFERENCES pleito(nome)
+	CONSTRAINT candidatuta_fk_1 FOREIGN KEY (candidato_principal) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT candidatuta_fk_2 FOREIGN KEY (candidato_vice) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT candidatuta_fk_3 FOREIGN KEY (cargo) REFERENCES cargo(id_cargo) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT candidatuta_fk_4 FOREIGN KEY (equipe_de_apoio) REFERENCES equipe_de_apoio(id_equipe) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT candidatuta_fk_5 FOREIGN KEY (pleito) REFERENCES pleito(nome) ON DELETE SET NULL ON UPDATE CASCADE
 );
 
 CREATE TABLE doadores (
@@ -95,8 +95,8 @@ CREATE TABLE doadores (
 	candidatura SERIAL,
 
 	CONSTRAINT doadores_pk PRIMARY KEY (cpf),
-	CONSTRAINT doadores_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf),
-	CONSTRAINT doadores_fk_2 FOREIGN KEY (candidatura) REFERENCES candidatura(id_candidatura)
+	CONSTRAINT doadores_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT doadores_fk_2 FOREIGN KEY (candidatura) REFERENCES candidatura(id_candidatura) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE empresa (
@@ -107,7 +107,7 @@ CREATE TABLE empresa (
 	candidatura SERIAL,
 
 	CONSTRAINT empresa_pk PRIMARY KEY (cnpj),
-	CONSTRAINT empresa_fk FOREIGN KEY (candidatura) REFERENCES candidatura(id_candidatura)
+	CONSTRAINT empresa_fk FOREIGN KEY (candidatura) REFERENCES candidatura(id_candidatura) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 CREATE TABLE participantes_equipe_de_apoio (
@@ -115,6 +115,6 @@ CREATE TABLE participantes_equipe_de_apoio (
 	equipe_de_apoio SERIAL,
 
 	CONSTRAINT participantes_equipe_de_apoio_pk PRIMARY KEY (cpf),
-	CONSTRAINT participantes_equipe_de_apoio_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf),
-	CONSTRAINT participantes_equipe_de_apoio_fk_2 FOREIGN KEY (equipe_de_apoio) REFERENCES equipe_de_apoio(id_equipe)
+	CONSTRAINT participantes_equipe_de_apoio_fk_1 FOREIGN KEY (cpf) REFERENCES individuo(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
+	CONSTRAINT participantes_equipe_de_apoio_fk_2 FOREIGN KEY (equipe_de_apoio) REFERENCES equipe_de_apoio(id_equipe) ON DELETE CASCADE ON UPDATE CASCADE
 );
