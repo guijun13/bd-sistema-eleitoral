@@ -11,6 +11,59 @@ VALUES
     ('45619732808', 'André Gustavo Zanardi', 'Física', '', '1998-07-03', 'Brasileira', '159357852645'), -- Doador 2
     ('48265913870', 'Simão dos Santos Cruz', 'Física', '', '2015-12-09', 'Brasileira', '123789357159'); -- Doador 3 
     ('85296374100', 'Juliana Aparecida Ferreira', 'Física', '852963741', '1998-09-28', 'Brasileira', '741852963001'), -- Doador 4
+    -- Integrantes Equipes de Apoio 1: 
+    ('74185296311', 'Maria Eduarda Oliveira', 'Física', '852963741', '1992-04-12', 'Brasileira', '741852963112'),
+    ('58962374122', 'Pedro Henrique Santos', 'Física', '589623741', '1988-08-25', 'Brasileira', '237415896122'),
+    ('96385274133', 'Ana Clara Rodrigues', 'Física', '963852741', '1999-03-17', 'Brasileira', '963852741334'),
+    ('23147896544', 'Lucas Gabriel Almeida', 'Física', '231478965', '1978-11-20', 'Brasileira', '478965231445'),
+    ('78945612355', 'Larissa Fernanda Souza', 'Física', '789456123', '1983-07-05', 'Brasileira', '456123789556'),
+    ('36925814766', 'Bruno Rafael Lima', 'Física', '369258147', '2003-01-30', 'Brasileira', '159357852456'),
+    ('45678912377', 'Gabriela Vitória Ferreira', 'Física', '456789123', '1996-09-08', 'Brasileira', '123456789778'),
+    ('12398745688', 'Thiago André Oliveira', 'Física', '123987456', '1981-05-22', 'Brasileira', '987654321889'),
+    ('98745632199', 'Camila Eduarda Santos', 'Física', '987456321', '1990-12-14', 'Brasileira', '321654987990'),
+    ('65412398700', 'Felipe Gustavo Almeida', 'Física', '654123987', '1975-06-28', 'Brasileira', '159159352458');
+    ('85296374101', 'Amanda Beatriz Silva', 'Física', '852963742', '1994-02-18', 'Brasileira', '741852963012'),
+    -- Integrantes Equipe de Apoio 2:
+    ('58962374102', 'Rodrigo Augusto Santos', 'Física', '589623742', '1989-09-05', 'Brasileira', '237415896023'),
+    ('96385274103', 'Carolina Maria Rodrigues', 'Física', '963852742', '1997-05-30', 'Brasileira', '963852741034'),
+    ('23147896504', 'Vitor Hugo Almeida', 'Física', '231478966', '1976-07-12', 'Brasileira', '478965231045'),
+    ('78945612305', 'Bianca Luiza Souza', 'Física', '789456124', '1987-03-28', 'Brasileira', '456123789056'),
+    ('36925814706', 'Leonardo Felipe Lima', 'Física', '369258148', '2000-08-15', 'Brasileira', '258147369067'),
+    ('45678912307', 'Julia Helena Ferreira', 'Física', '456789124', '1991-01-01', 'Brasileira', '123456789078'),
+    ('12398745608', 'Rafael Vinicius Oliveira', 'Física', '123987457', '1986-12-25', 'Brasileira', '987654321089'),
+    ('98745632109', 'Manuela Alice Santos', 'Física', '987456322', '1995-06-10', 'Brasileira', '321654987090'),
+    ('65412398710', 'Eduardo Gabriel Almeida', 'Física', '654123988', '1979-10-09', 'Brasileira', '987123654012');
+    ('74185296311', 'Mariana Beatriz Oliveira', 'Física', '741852964', '1998-03-12', 'Brasileira', '85296374111'),
+    ('23741589612', 'Pedro Henrique Souza', 'Física', '237415897', '1985-11-20', 'Brasileira', '58962374112'),
+    -- Intehrantes da Equipe 3:
+    ('96385274113', 'Larissa Fernanda Lima', 'Física', '963852743', '1992-04-08', 'Brasileira', '96385274113'),
+    ('47896523114', 'Gustavo Adolfo Almeida', 'Física', '478965232', '1980-06-22', 'Brasileira', '23147896514'),
+    ('45612378915', 'Ana Júlia Rodrigues', 'Física', '456123790', '1996-09-16', 'Brasileira', '78945612315'),
+    ('25814736916', 'Felipe Augusto Ferreira', 'Física', '258147370', '1983-01-29', 'Brasileira', '36925814716'),
+    ('12345678917', 'Camila Eduarda Santos', 'Física', '123456790', '1999-12-03', 'Brasileira', '45678912317'),
+    ('98765432118', 'Lucas Gabriel Oliveira', 'Física', '987654323', '1988-07-07', 'Brasileira', '12398745618'),
+    ('32165498719', 'Isabella Vitória Lima', 'Física', '321654988', '1990-05-15', 'Brasileira', '98745632119'),
+    ('98712365420', 'Bruno Rafael Souza', 'Física', '987123655', '1984-02-26', 'Brasileira', '65412398720'),
+    ('58962374121', 'Juliana Gabriela Ferreira', 'Física', '589623745', '1993-08-27', 'Brasileira', '96385274121'),
+    ('96385274122', 'Thiago Henrique Almeida', 'Física', '963852746', '1981-04-19', 'Brasileira', '23147896522'),
+    ('23147896523', 'Beatriz Helena Santos', 'Física', '231478967', '1997-11-06', 'Brasileira', '78945612323'),
+    ('78945612324', 'Vinicius Eduardo Lima', 'Física', '789456127', '1989-02-14', 'Brasileira', '36925814724'),
+    ('36925814725', 'Laura Maria Rodrigues', 'Física', '369258149', '1995-07-21', 'Brasileira', '45678912325'),
+    -- Integrantes da Equipe 4:
+    ('45678912326', 'Gabriel Pedro Oliveira', 'Física', '456789128', '1986-09-03', 'Brasileira', '12398745626'),
+    ('12398745627', 'Fernanda Alice Almeida', 'Física', '123987458', '1994-06-17', 'Brasileira', '98745632127'),
+    ('98745632128', 'Arthur Miguel Ferreira', 'Física', '987456324', '1982-12-11', 'Brasileira', '65412398728'),
+    ('65412398729', 'Isabela Luiza Souza', 'Física', '654123989', '1998-01-05', 'Brasileira', '74185296329'),
+    ('74185296330', 'Rafael Gustavo Lima', 'Física', '741852965', '1987-10-28', 'Brasileira', '23741589630'),
+    ('23741589631', 'Manuela Vitória Rodrigues', 'Física', '237415898', '1991-03-22', 'Brasileira', '96385274131'),
+    ('96385274132', 'Eduardo Felipe Santos', 'Física', '963852747', '1979-08-09', 'Brasileira', '47896523132'),
+    ('47896523133', 'Alice Helena Almeida', 'Física', '478965233', '1995-05-01', 'Brasileira', '45612378933'),
+    ('45612378934', 'Leonardo Bruno Ferreira', 'Física', '456123791', '1986-11-18', 'Brasileira', '25814736934'),
+    ('25814736935', 'Caroline Mariana Oliveira', 'Física', '258147371', '1992-09-29', 'Brasileira', '12345678935'),
+    ('12345678936', 'Vitor Hugo Souza', 'Física', '123456792', '1984-07-04', 'Brasileira', '98765432136')
+    
+
+
 
 
 INSERT INTO processo_judicial (nro_processo, data, acusado)
@@ -88,18 +141,56 @@ VALUES
 
 INSERT INTO participantes_equipe_de_apoio (cpf, equipe_de_apoio)
 VALUES 
-    ('', ''),
-    ('', ''),
-    ('', ''), 
-    ('', ''),
-    ('', ''),
-    ('', ''),
-    ('', ''),
-    ('', ''),
-    ('', ''), 
-    ('', ''),
-    ('', ''),
-    ('', '');
+    -- Integrantes Equipes de Apoio 1: 
+    ('74185296311', ''),
+    ('58962374122', ''),
+    ('96385274133', ''),
+    ('23147896544', ''),
+    ('78945612355', ''),
+    ('36925814766', ''), 
+    ('45678912377', ''),
+    ('12398745688', ''),
+    ('98745632199', ''),
+    ('65412398700', ''),
+    ('85296374101', ''), 
+    -- Integrantes Equipe de Apoio 2:
+    ('58962374102', ''), 
+    ('96385274103', ''),
+    ('23147896504', ''),
+    ('78945612305', ''),
+    ('36925814706', ''),
+    ('45678912307', ''),
+    ('12398745608', ''),
+    ('98745632109', ''),
+    ('65412398710', ''),
+    ('74185296311', ''),
+    ('23741589612', ''),
+    -- Intehrantes da Equipe 3:
+    ('96385274113', ''),
+    ('47896523114', ''),
+    ('45612378915', ''),
+    ('25814736916', ''),
+    ('12345678917', ''),
+    ('98765432118', ''),
+    ('32165498719', ''),
+    ('98712365420', ''),
+    ('58962374121', ''),
+    ('96385274122', ''),
+    ('23147896523', ''),
+    ('78945612324', ''),
+    ('36925814725', ''),
+    -- Integrantes da Equipe 4:
+    ('45678912326', ''),
+    ('12398745627', ''),
+    ('98745632128', ''),
+    ('65412398729', ''), 
+    ('74185296330', ''), 
+    ('23741589631', ''), 
+    ('96385274132', ''),
+    ('47896523133', ''), 
+    ('45612378934', ''),
+    ('25814736935', ''), 
+    ('12345678936', '');
 
 
 
