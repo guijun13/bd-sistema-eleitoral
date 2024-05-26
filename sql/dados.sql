@@ -70,119 +70,119 @@ VALUES
 
 INSERT INTO partido (nome, abreviação, nro_integrantes) --Preencher
 VALUES 
-    ('Partido do Trabalho Intenso', 'PTI', '13'),
-    ('Partido Azul', 'PA', '11'),
-    ('Partido Brasileiro Político', 'PBP', '8'),
-    ('Partido da Liberdade Cinza', 'PLC', '14'),
+    ('Partido do Trabalho Intenso', 'PTI', 13),
+    ('Partido Azul', 'PA', 11),
+    ('Partido Brasileiro Político', 'PBP', 8),
+    ('Partido da Liberdade Cinza', 'PLC', 14),
 
 INSERT INTO programa_partido (partido, descrição) -- Preencher
 VALUES 
-    ('Partido do Trabalho Digno', 'Somos um partido que busca a dignidade no trabalho, sendo ele político ou laboroso!'),
-    ('Partido Azul', 'Um partido que busca o equilíbrio ambiental acima de tudo, bem como o desenvolvimento sustentável!'),
-    ('Partido Brasileiro Político', 'Um partido que busca alianças dignas de políticas que vão de encontro aos interesses do Brasil!'),
-    ('Partido da Liberdade Cinza', 'Liberdade não deve ser algo intangível, assim como a cor cinza, deve ser comum e igualitária.');
+    (1, 'Somos um partido que busca a dignidade no trabalho, sendo ele político ou laboroso!'),
+    (2, 'Um partido que busca o equilíbrio ambiental acima de tudo, bem como o desenvolvimento sustentável!'),
+    (3, 'Um partido que busca alianças dignas de políticas que vão de encontro aos interesses do Brasil!'),
+    (4, 'Liberdade não deve ser algo intangível, assim como a cor cinza, deve ser comum e igualitária.');
 
 INSERT INTO candidato (cpf, vice, partido)
 VALUES 
-    ('42519862358', 'YES', ''), -- 1
-    ('46603592128', 'YES', ''), -- 2
-    ('84166501982', 'NO', ''), -- 3
-    ('19726485225', 'YES', ''); -- 4
+    ('42519862358', YES, 1), -- 1
+    ('46603592128', YES, 2), -- 2
+    ('84166501982', NO, 3), -- 3
+    ('19726485225', YES, 4); -- 4
 
 INSERT INTO pleito (nome, quantidade_votos)
 VALUES 
     ('Eleições Gerais para o Estado Brasileiro', '77982024');
 
-INSERT INTO cargo (id_cargo, titulo, tipo)
+INSERT INTO cargo (titulo, tipo)
 VALUES 
     ('Presidente', 'Federal');
     ('Vice-Presidente', 'Federal');
 
 INSERT INTO equipe_de_apoio (nome, nro_membros)
 VALUES 
-    ('Equipe 1', '11'),
-    ('Equipe 2', '12'),
-    ('Equipe 3', '13'),
-    ('Equipe 4', '11'),
+    ('Equipe 1', 11),
+    ('Equipe 2', 12),
+    ('Equipe 3', 13),
+    ('Equipe 4', 11),
 
 INSERT INTO candidatura (candidato_principal, candidato_vice, cargo, equipe_de_apoio, pleito, ano)
 VALUES 
-    ('42519862358', '12486525482', 'Presidente', 'Equipe 1', 'Eleições Gerais para o Estado Brasileiro', '2022'),
-    ('46603592128', '66507824902', 'Presidente', 'Equipe 2', 'Eleições Gerais para o Estado Brasileiro', '2022'),
-    ('84166501982', NULL, 'Presidente', 'Equipe 3', 'Eleições Gerais para o Estado Brasileiro', '2022'), 
-    ('19726485225', '49925812673', 'Presidente', 'Equipe 4', 'Eleições Gerais para o Estado Brasileiro', '2022');
+    ('42519862358', '12486525482', 1, 1, 'Eleições Gerais para o Estado Brasileiro', 2022),
+    ('46603592128', '66507824902', 1, 2, 'Eleições Gerais para o Estado Brasileiro', 2022),
+    ('84166501982', NULL, 1, 3, 'Eleições Gerais para o Estado Brasileiro', 2022), 
+    ('19726485225', '49925812673', 1, 4, 'Eleições Gerais para o Estado Brasileiro', 2022);
 
 INSERT INTO doadores (cpf, valor_doação, candidatura)
 VALUES 
-    ('75395102846', '85000', ''),
-    ('45619732808', '270000', ''),
-    ('48265913870', '1000000', ''),
-    ('85296374100', '510000', '');
+    ('75395102846', 85000, 1),
+    ('45619732808', 270000, 2),
+    ('48265913870', 1000000, 3),
+    ('85296374100', 510000, 4);
 
 INSERT INTO empresa (cnpj, nome, localização, valor_doação, candidatura)
 VALUES 
-    ('12345678000198', 'Tech Solutions SA', 'São Paulo', '500000', 'Candidata 1'),
-    ('98765432000102', 'InovaTech LTDA', 'Rio de Janeiro', '2000000', 'Candidata 2'),
-    ('54321098000187', 'Green Energy Corp', 'Minas Gerais', '2500000', 'Candidata 3'),
-    ('87654321000165', 'AgroTech Solutions', 'Paraná', '4000000', 'Candidata 4'),
-    ('21098765000154', 'HealthTech Innovations', 'Santa Catarina', '3000000', 'Candidata 1'),
-    ('65432109000132', 'EduTech Group', 'Rio Grande do Sul', '4500000', 'Candidata 2'),
-    ('09876543000121', 'FinTech Services', 'Bahia', '8000000', 'Candidata 3'),
-    ('32109876000110', 'BioTech Research', 'Pernambuco', '850000', 'Candidata 4');
+    ('12345678000198', 'Tech Solutions SA', 'São Paulo', 500000, 1),
+    ('98765432000102', 'InovaTech LTDA', 'Rio de Janeiro', 2000000, 2),
+    ('54321098000187', 'Green Energy Corp', 'Minas Gerais', 2500000, 3),
+    ('87654321000165', 'AgroTech Solutions', 'Paraná', 4000000, 4),
+    ('21098765000154', 'HealthTech Innovations', 'Santa Catarina', 3000000, 1),
+    ('65432109000132', 'EduTech Group', 'Rio Grande do Sul', 4500000, 2),
+    ('09876543000121', 'FinTech Services', 'Bahia', 8000000, 3),
+    ('32109876000110', 'BioTech Research', 'Pernambuco', 850000, 4);
 
 
 INSERT INTO participantes_equipe_de_apoio (cpf, equipe_de_apoio)
 VALUES 
     -- Integrantes Equipes de Apoio 1: 
-    ('74185296311', ''),
-    ('58962374122', ''),
-    ('96385274133', ''),
-    ('23147896544', ''),
-    ('78945612355', ''),
-    ('36925814766', ''), 
-    ('45678912377', ''),
-    ('12398745688', ''),
-    ('98745632199', ''),
-    ('65412398700', ''),
-    ('85296374101', ''), 
+    ('74185296311', 1),
+    ('58962374122', 1),
+    ('96385274133', 1),
+    ('23147896544', 1),
+    ('78945612355', 1),
+    ('36925814766', 1), 
+    ('45678912377', 1),
+    ('12398745688', 1),
+    ('98745632199', 1),
+    ('65412398700', 1),
+    ('85296374101', 1), 
     -- Integrantes Equipe de Apoio 2:
-    ('58962374102', ''), 
-    ('96385274103', ''),
-    ('23147896504', ''),
-    ('78945612305', ''),
-    ('36925814706', ''),
-    ('45678912307', ''),
-    ('12398745608', ''),
-    ('98745632109', ''),
-    ('65412398710', ''),
-    ('74185296311', ''),
-    ('23741589612', ''),
+    ('58962374102', 2), 
+    ('96385274103', 2),
+    ('23147896504', 2),
+    ('78945612305', 2),
+    ('36925814706', 2),
+    ('45678912307', 2),
+    ('12398745608', 2),
+    ('98745632109', 2),
+    ('65412398710', 2),
+    ('74185296311', 2),
+    ('23741589612', 2),
     -- Intehrantes da Equipe 3:
-    ('96385274113', ''),
-    ('47896523114', ''),
-    ('45612378915', ''),
-    ('25814736916', ''),
-    ('12345678917', ''),
-    ('98765432118', ''),
-    ('32165498719', ''),
-    ('98712365420', ''),
-    ('58962374121', ''),
-    ('96385274122', ''),
-    ('23147896523', ''),
-    ('78945612324', ''),
-    ('36925814725', ''),
+    ('96385274113', 3),
+    ('47896523114', 3),
+    ('45612378915', 3),
+    ('25814736916', 3),
+    ('12345678917', 3),
+    ('98765432118', 3),
+    ('32165498719', 3),
+    ('98712365420', 3),
+    ('58962374121', 3),
+    ('96385274122', 3),
+    ('23147896523', 3),
+    ('78945612324', 3),
+    ('36925814725', 3),
     -- Integrantes da Equipe 4:
-    ('45678912326', ''),
-    ('12398745627', ''),
-    ('98745632128', ''),
-    ('65412398729', ''), 
-    ('74185296330', ''), 
-    ('23741589631', ''), 
-    ('96385274132', ''),
-    ('47896523133', ''), 
-    ('45612378934', ''),
-    ('25814736935', ''), 
-    ('12345678936', '');
+    ('45678912326', 4),
+    ('12398745627', 4),
+    ('98745632128', 4),
+    ('65412398729', 4), 
+    ('74185296330', 4), 
+    ('23741589631', 4), 
+    ('96385274132', 4),
+    ('47896523133', 4), 
+    ('45612378934', 4),
+    ('25814736935', 4), 
+    ('12345678936', 4);
 
 
 
