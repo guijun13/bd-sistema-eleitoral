@@ -68,19 +68,19 @@ VALUES
     ('2594625871034950134858154', '2019-03-21', '46603592128'), -- Maria Luiza Oliveira 
     ('7989119588562058892020819', '2021-04-03', '84166501982'); -- Fernanda Cristina Lima
 
-INSERT INTO partido (id_partido, nome, abreviação, nro_integrantes) --Preencher
+INSERT INTO partido (nome, abreviação, nro_integrantes) --Preencher
 VALUES 
-    ('', 'Partido do Trabalho Intenso', 'PTI', '13'),
-    ('', 'Partido Azul', 'PA', '11'),
-    ('', 'Partido Brasileiro Político', 'PBP', '8'),
-    ('', 'Partido da Liberdade Cinza', 'PLC', '14'),
+    ('Partido do Trabalho Intenso', 'PTI', '13'),
+    ('Partido Azul', 'PA', '11'),
+    ('Partido Brasileiro Político', 'PBP', '8'),
+    ('Partido da Liberdade Cinza', 'PLC', '14'),
 
-INSERT INTO programa_partido (id_programa, partido, descrição) -- Preencher
+INSERT INTO programa_partido (partido, descrição) -- Preencher
 VALUES 
-    ('', 'Partido do Trabalho Digno', 'Somos um partido que busca a dignidade no trabalho, sendo ele político ou laboroso!'),
-    ('', 'Partido Azul', 'Um partido que busca o equilíbrio ambiental acima de tudo, bem como o desenvolvimento sustentável!'),
-    ('', 'Partido Brasileiro Político', 'Um partido que busca alianças dignas de políticas que vão de encontro aos interesses do Brasil!'),
-    ('', 'Partido da Liberdade Cinza', 'Liberdade não deve ser algo intangível, assim como a cor cinza, deve ser comum e igualitária.');
+    ('Partido do Trabalho Digno', 'Somos um partido que busca a dignidade no trabalho, sendo ele político ou laboroso!'),
+    ('Partido Azul', 'Um partido que busca o equilíbrio ambiental acima de tudo, bem como o desenvolvimento sustentável!'),
+    ('Partido Brasileiro Político', 'Um partido que busca alianças dignas de políticas que vão de encontro aos interesses do Brasil!'),
+    ('Partido da Liberdade Cinza', 'Liberdade não deve ser algo intangível, assim como a cor cinza, deve ser comum e igualitária.');
 
 INSERT INTO candidato (cpf, vice, partido)
 VALUES 
@@ -98,19 +98,19 @@ VALUES
     ('Presidente', 'Federal');
     ('Vice-Presidente', 'Federal');
 
-INSERT INTO equipe_de_apoio (id_equipe, nome, nro_membros)
+INSERT INTO equipe_de_apoio (nome, nro_membros)
 VALUES 
-    ('', 'Equipe 1', '11'),
-    ('', 'Equipe 2', '12'),
-    ('', 'Equipe 3', '13'),
-    ('', 'Equipe 4', '11'),
+    ('Equipe 1', '11'),
+    ('Equipe 2', '12'),
+    ('Equipe 3', '13'),
+    ('Equipe 4', '11'),
 
-INSERT INTO candidatura (id_candidatura, candidato_principal, candidato_vice, cargo, equipe_de_apoio, pleito, ano)
+INSERT INTO candidatura (candidato_principal, candidato_vice, cargo, equipe_de_apoio, pleito, ano)
 VALUES 
-    ('', '42519862358', '12486525482', 'Presidente', 'Equipe 1', 'Eleições Gerais para o Estado Brasileiro', '2022'),
-    ('', '46603592128', '66507824902', 'Presidente', 'Equipe 2', 'Eleições Gerais para o Estado Brasileiro', '2022'),
-    ('', '84166501982', NULL, 'Presidente', 'Equipe 3', 'Eleições Gerais para o Estado Brasileiro', '2022'), 
-    ('', '19726485225', '49925812673', 'Presidente', 'Equipe 4', 'Eleições Gerais para o Estado Brasileiro', '2022');
+    ('42519862358', '12486525482', 'Presidente', 'Equipe 1', 'Eleições Gerais para o Estado Brasileiro', '2022'),
+    ('46603592128', '66507824902', 'Presidente', 'Equipe 2', 'Eleições Gerais para o Estado Brasileiro', '2022'),
+    ('84166501982', NULL, 'Presidente', 'Equipe 3', 'Eleições Gerais para o Estado Brasileiro', '2022'), 
+    ('19726485225', '49925812673', 'Presidente', 'Equipe 4', 'Eleições Gerais para o Estado Brasileiro', '2022');
 
 INSERT INTO doadores (cpf, valor_doação, candidatura)
 VALUES 
