@@ -116,10 +116,7 @@ VALUES ('Partido dos Trabalhadores', 'PT', 100),
   ('Partido Socialismo e Liberdade', 'PSOL', 1000);
 -- Inserindo valores na tabela programa_partido
 INSERT INTO programa_partido (partido, descricao)
-VALUES (
-    1,
-    'Programa de Governo do Partido dos Trabalhadores'
-  ),
+VALUES (1, 'Programa de Governo do PT'),
   (2, 'Programa de Governo do PSDB'),
   (3, 'Programa de Governo do MDB'),
   (4, 'Programa de Governo do PSB'),
