@@ -3,9 +3,9 @@ CREATE TABLE individuo (
     nome VARCHAR(255) NOT NULL,
     tipo VARCHAR(50),
     rg CHAR(16),
-    data_de_nascimento DATE,
-    nacionalidade VARCHAR(100),
-    titulo_eleitor CHAR(12),
+    data_de_nascimento DATE NOT NULL,
+    nacionalidade VARCHAR(100) NOT NULL,
+    titulo_eleitor CHAR(12)NOT NULL,
 
 	CONSTRAINT individuo_pk PRIMARY KEY (cpf),
 	CONSTRAINT individuo_sk unique (titulo_eleitor)
@@ -14,7 +14,7 @@ CREATE TABLE individuo (
 CREATE TABLE processo_judicial (
 	nro_processo CHAR(25),
 	data DATE,
-	acusado CHAR(11),
+	acusado CHAR(11) NOT NULL,
 
 	CONSTRAINT processo_judicial_pk PRIMARY KEY (nro_processo),
 	CONSTRAINT processo_judicial_fk FOREIGN KEY (acusado) REFERENCES individuo(cpf) ON DELETE CASCADE ON UPDATE CASCADE
@@ -23,7 +23,7 @@ CREATE TABLE processo_judicial (
 CREATE TABLE partido (
 	id_partido SERIAL,
 	nome VARCHAR(255) NOT NULL,
-	abreviacao VARCHAR(16),
+	abreviacao VARCHAR(16) NOT NULL,
 	nro_integrantes NUMERIC,
 
 	CONSTRAINT partido_pk PRIMARY KEY (id_partido)
@@ -57,8 +57,8 @@ CREATE TABLE pleito (
 
 CREATE TABLE cargo (
 	id_cargo SERIAL,
-	titulo VARCHAR(255),
-	tipo VARCHAR(9),
+	titulo VARCHAR(255) NOT NULL,
+	tipo VARCHAR(9) NOT NULL,
 
 	CONSTRAINT cargo_pk PRIMARY KEY (id_cargo),
 	CONSTRAINT cargo_tipo_ck CHECK (tipo in ('Municipal', 'Estadual', 'Federal'))
@@ -74,12 +74,12 @@ CREATE TABLE equipe_de_apoio (
 
 CREATE TABLE candidatura (
 	id_candidatura SERIAL,
-	candidato_principal CHAR(11),
+	candidato_principal CHAR(11) NOT NULL,
 	candidato_vice CHAR(11),
-	cargo SERIAL,
+	cargo SERIAL NOT NULL,
 	equipe_de_apoio SERIAL,
 	pleito VARCHAR(255),
-	ano NUMERIC,
+	ano NUMERIC NOT NULL,
 
 	CONSTRAINT candidatura_pk PRIMARY KEY (id_candidatura),
 	CONSTRAINT candidatuta_fk_1 FOREIGN KEY (candidato_principal) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
