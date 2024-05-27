@@ -1,9 +1,10 @@
 # Sistema eleitoral
 
-SCC0240 - Base de dados
-Prof. Jose Fernando Rodrigues Junior
-Guilherme Jun Y. Grillo - 11208350
-Lucas Issao Omati - 13673090
+SCC0240 - Base de dados - Prof. Jose Fernando Rodrigues Junior
+- Guilherme Jun Y. Grillo - 11208350
+- Leonardo Leitão Zanardo - 
+- Lucas Issao Omati - 13673090
+- Samuel Victorio Bernacci - 12703455
 
 ## Estrutura do Projeto
 
@@ -19,15 +20,19 @@ A estrutura do projeto é delineada pelas seguintes diretórios:
 ## Instruções de Uso
 
 1. Instale um servidor local postgreSQL no seu PC, a depender do seu sistema operacional
+2. Faça uma copia do projeto
+```
+git clone https://github.com/guijun13/bd-sistema-eleitoral.git
+```
 
-2. Entre na pasta 07.Prototipo
+3. Entre na pasta 07.Prototipo
 ```
 cd 07.Prototipo
 ```
 
-3. Preencha as informações do seu banco de dados correspondente com o arquivo `database.ini`, ou então altere-o com as suas configurações de host, database, user, password, port
+1. Preencha as informações do seu banco de dados correspondente com o arquivo `database.ini`, ou então altere-o com as suas configurações de host, database, user, password, port
 
-4. Verifique se você tem instalado o Python3
+2. Verifique se você tem instalado o Python3
 ```
 python3 --version
 ```
