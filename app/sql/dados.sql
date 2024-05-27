@@ -10,7 +10,7 @@ INSERT INTO individuo (
 VALUES (
     '42519862358',
     'Ana Maria Souza',
-    'Física',
+    'Candidato',
     '123456789',
     '1980-03-25',
     'Brasileira',
@@ -20,7 +20,7 @@ VALUES (
   (
     '12486525482',
     'Carlos Alberto Santos',
-    'Física',
+    'Candidato',
     '987654321',
     '1975-09-12',
     'Brasileira',
@@ -30,7 +30,7 @@ VALUES (
   (
     '46603592128',
     'Maria Luiza Oliveira',
-    'Física',
+    'Candidato',
     '567891234',
     '1995-01-18',
     'Brasileira',
@@ -40,7 +40,7 @@ VALUES (
   (
     '66507824902',
     'Pedro Henrique Almeida',
-    'Física',
+    'Candidato',
     '123987456',
     '2002-06-30',
     'Brasileira',
@@ -50,7 +50,7 @@ VALUES (
   (
     '84166501982',
     'Fernanda Cristina Lima',
-    'Física',
+    'Candidato',
     '789456123',
     '1988-11-05',
     'Brasileira',
@@ -60,7 +60,7 @@ VALUES (
   (
     '19726485225',
     'João Paulo Ferreira',
-    'Física',
+    'Candidato',
     '456123789',
     '1992-04-10',
     'Brasileira',
@@ -70,7 +70,7 @@ VALUES (
   (
     '49925812673',
     'Luciana dos Santos',
-    'Física',
+    'Candidato',
     '465298027',
     '2010-08-22',
     'Brasileira',
@@ -80,7 +80,7 @@ VALUES (
   (
     '75395102846',
     'Paulo Roberto Risco',
-    'Física',
+    'Candidato',
     '',
     '2005-02-15',
     'Brasileira',
@@ -90,7 +90,7 @@ VALUES (
   (
     '45619732808',
     'André Gustavo Zanardi',
-    'Física',
+    'Doador',
     '',
     '1998-07-03',
     'Brasileira',
@@ -100,7 +100,7 @@ VALUES (
   (
     '48265913870',
     'Simão dos Santos Cruz',
-    'Física',
+    'Doador',
     '',
     '2015-12-09',
     'Brasileira',
@@ -110,7 +110,7 @@ VALUES (
   (
     '85296374100',
     'Juliana Aparecida Ferreira',
-    'Física',
+    'Doador',
     '852963741',
     '1998-09-28',
     'Brasileira',
@@ -121,7 +121,7 @@ VALUES (
   (
     '74185296311',
     'Maria Eduarda Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '852963741',
     '1992-04-12',
     'Brasileira',
@@ -130,7 +130,7 @@ VALUES (
   (
     '58962374122',
     'Pedro Henrique Santos',
-    'Física',
+    'Participante equipe de apoio',
     '589623741',
     '1988-08-25',
     'Brasileira',
@@ -139,7 +139,7 @@ VALUES (
   (
     '96385274133',
     'Ana Clara Rodrigues',
-    'Física',
+    'Participante equipe de apoio',
     '963852741',
     '1999-03-17',
     'Brasileira',
@@ -148,7 +148,7 @@ VALUES (
   (
     '23147896544',
     'Lucas Gabriel Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '231478965',
     '1978-11-20',
     'Brasileira',
@@ -157,7 +157,7 @@ VALUES (
   (
     '78945612355',
     'Larissa Fernanda Souza',
-    'Física',
+    'Participante equipe de apoio',
     '789456123',
     '1983-07-05',
     'Brasileira',
@@ -166,7 +166,7 @@ VALUES (
   (
     '36925814766',
     'Bruno Rafael Lima',
-    'Física',
+    'Participante equipe de apoio',
     '369258147',
     '2003-01-30',
     'Brasileira',
@@ -175,7 +175,7 @@ VALUES (
   (
     '45678912377',
     'Gabriela Vitória Ferreira',
-    'Física',
+    'Participante equipe de apoio',
     '456789123',
     '1996-09-08',
     'Brasileira',
@@ -184,7 +184,7 @@ VALUES (
   (
     '12398745688',
     'Thiago André Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '123987456',
     '1981-05-22',
     'Brasileira',
@@ -193,7 +193,7 @@ VALUES (
   (
     '98745632199',
     'Camila Eduarda Santos',
-    'Física',
+    'Participante equipe de apoio',
     '987456321',
     '1990-12-14',
     'Brasileira',
@@ -202,7 +202,7 @@ VALUES (
   (
     '65412398700',
     'Felipe Gustavo Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '654123987',
     '1975-06-28',
     'Brasileira',
@@ -211,7 +211,7 @@ VALUES (
   (
     '85296374101',
     'Amanda Beatriz Silva',
-    'Física',
+    'Participante equipe de apoio',
     '852963742',
     '1994-02-18',
     'Brasileira',
@@ -221,7 +221,7 @@ VALUES (
   (
     '58962374102',
     'Rodrigo Augusto Santos',
-    'Física',
+    'Participante equipe de apoio',
     '589623742',
     '1989-09-05',
     'Brasileira',
@@ -230,7 +230,7 @@ VALUES (
   (
     '96385274103',
     'Carolina Maria Rodrigues',
-    'Física',
+    'Participante equipe de apoio',
     '963852742',
     '1997-05-30',
     'Brasileira',
@@ -239,7 +239,7 @@ VALUES (
   (
     '23147896504',
     'Vitor Hugo Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '231478966',
     '1976-07-12',
     'Brasileira',
@@ -248,7 +248,7 @@ VALUES (
   (
     '78945612305',
     'Bianca Luiza Souza',
-    'Física',
+    'Participante equipe de apoio',
     '789456124',
     '1987-03-28',
     'Brasileira',
@@ -257,7 +257,7 @@ VALUES (
   (
     '36925814706',
     'Leonardo Felipe Lima',
-    'Física',
+    'Participante equipe de apoio',
     '369258148',
     '2000-08-15',
     'Brasileira',
@@ -266,7 +266,7 @@ VALUES (
   (
     '45678912307',
     'Julia Helena Ferreira',
-    'Física',
+    'Participante equipe de apoio',
     '456789124',
     '1991-01-01',
     'Brasileira',
@@ -275,7 +275,7 @@ VALUES (
   (
     '12398745608',
     'Rafael Vinicius Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '123987457',
     '1986-12-25',
     'Brasileira',
@@ -284,7 +284,7 @@ VALUES (
   (
     '98745632109',
     'Manuela Alice Santos',
-    'Física',
+    'Participante equipe de apoio',
     '987456322',
     '1995-06-10',
     'Brasileira',
@@ -293,7 +293,7 @@ VALUES (
   (
     '65412398710',
     'Eduardo Gabriel Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '654123988',
     '1979-10-09',
     'Brasileira',
@@ -302,7 +302,7 @@ VALUES (
   (
     '74185296312',
     'Mariana Beatriz Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '741852964',
     '1998-03-12',
     'Brasileira',
@@ -311,7 +311,7 @@ VALUES (
   (
     '23741589612',
     'Pedro Henrique Souza',
-    'Física',
+    'Participante equipe de apoio',
     '237415897',
     '1985-11-20',
     'Brasileira',
@@ -321,7 +321,7 @@ VALUES (
   (
     '96385274113',
     'Larissa Fernanda Lima',
-    'Física',
+    'Participante equipe de apoio',
     '963852743',
     '1992-04-08',
     'Brasileira',
@@ -330,7 +330,7 @@ VALUES (
   (
     '47896523114',
     'Gustavo Adolfo Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '478965232',
     '1980-06-22',
     'Brasileira',
@@ -339,7 +339,7 @@ VALUES (
   (
     '45612378915',
     'Ana Júlia Rodrigues',
-    'Física',
+    'Participante equipe de apoio',
     '456123790',
     '1996-09-16',
     'Brasileira',
@@ -348,7 +348,7 @@ VALUES (
   (
     '25814736916',
     'Felipe Augusto Ferreira',
-    'Física',
+    'Participante equipe de apoio',
     '258147370',
     '1983-01-29',
     'Brasileira',
@@ -357,7 +357,7 @@ VALUES (
   (
     '12345678917',
     'Camila Eduarda Santos',
-    'Física',
+    'Participante equipe de apoio',
     '123456790',
     '1999-12-03',
     'Brasileira',
@@ -366,7 +366,7 @@ VALUES (
   (
     '98765432118',
     'Lucas Gabriel Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '987654323',
     '1988-07-07',
     'Brasileira',
@@ -375,7 +375,7 @@ VALUES (
   (
     '32165498719',
     'Isabella Vitória Lima',
-    'Física',
+    'Participante equipe de apoio',
     '321654988',
     '1990-05-15',
     'Brasileira',
@@ -384,7 +384,7 @@ VALUES (
   (
     '98712365420',
     'Bruno Rafael Souza',
-    'Física',
+    'Participante equipe de apoio',
     '987123655',
     '1984-02-26',
     'Brasileira',
@@ -393,7 +393,7 @@ VALUES (
   (
     '58962374121',
     'Juliana Gabriela Ferreira',
-    'Física',
+    'Participante equipe de apoio',
     '589623745',
     '1993-08-27',
     'Brasileira',
@@ -402,7 +402,7 @@ VALUES (
   (
     '96385274122',
     'Thiago Henrique Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '963852746',
     '1981-04-19',
     'Brasileira',
@@ -411,7 +411,7 @@ VALUES (
   (
     '23147896523',
     'Beatriz Helena Santos',
-    'Física',
+    'Participante equipe de apoio',
     '231478967',
     '1997-11-06',
     'Brasileira',
@@ -420,7 +420,7 @@ VALUES (
   (
     '78945612324',
     'Vinicius Eduardo Lima',
-    'Física',
+    'Participante equipe de apoio',
     '789456127',
     '1989-02-14',
     'Brasileira',
@@ -429,7 +429,7 @@ VALUES (
   (
     '36925814725',
     'Laura Maria Rodrigues',
-    'Física',
+    'Participante equipe de apoio',
     '369258149',
     '1995-07-21',
     'Brasileira',
@@ -439,7 +439,7 @@ VALUES (
   (
     '45678912326',
     'Gabriel Pedro Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '456789128',
     '1986-09-03',
     'Brasileira',
@@ -448,7 +448,7 @@ VALUES (
   (
     '12398745627',
     'Fernanda Alice Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '123987458',
     '1994-06-17',
     'Brasileira',
@@ -457,7 +457,7 @@ VALUES (
   (
     '98745632128',
     'Arthur Miguel Ferreira',
-    'Física',
+    'Participante equipe de apoio',
     '987456324',
     '1982-12-11',
     'Brasileira',
@@ -466,7 +466,7 @@ VALUES (
   (
     '65412398729',
     'Isabela Luiza Souza',
-    'Física',
+    'Participante equipe de apoio',
     '654123989',
     '1998-01-05',
     'Brasileira',
@@ -475,7 +475,7 @@ VALUES (
   (
     '74185296330',
     'Rafael Gustavo Lima',
-    'Física',
+    'Participante equipe de apoio',
     '741852965',
     '1987-10-28',
     'Brasileira',
@@ -484,7 +484,7 @@ VALUES (
   (
     '23741589631',
     'Manuela Vitória Rodrigues',
-    'Física',
+    'Participante equipe de apoio',
     '237415898',
     '1991-03-22',
     'Brasileira',
@@ -493,7 +493,7 @@ VALUES (
   (
     '96385274132',
     'Eduardo Felipe Santos',
-    'Física',
+    'Participante equipe de apoio',
     '963852747',
     '1979-08-09',
     'Brasileira',
@@ -502,7 +502,7 @@ VALUES (
   (
     '47896523133',
     'Alice Helena Almeida',
-    'Física',
+    'Participante equipe de apoio',
     '478965233',
     '1995-05-01',
     'Brasileira',
@@ -511,7 +511,7 @@ VALUES (
   (
     '45612378934',
     'Leonardo Bruno Ferreira',
-    'Física',
+    'Participante equipe de apoio',
     '456123791',
     '1986-11-18',
     'Brasileira',
@@ -520,7 +520,7 @@ VALUES (
   (
     '25814736935',
     'Caroline Mariana Oliveira',
-    'Física',
+    'Participante equipe de apoio',
     '258147371',
     '1992-09-29',
     'Brasileira',
@@ -529,7 +529,7 @@ VALUES (
   (
     '12345678936',
     'Vitor Hugo Souza',
-    'Física',
+    'Participante equipe de apoio',
     '123456792',
     '1984-07-04',
     'Brasileira',
@@ -577,14 +577,17 @@ VALUES (
     'Liberdade não deve ser algo intangível, assim como a cor cinza, deve ser comum e igualitária.'
   );
 INSERT INTO candidato (cpf, vice, partido)
-VALUES ('42519862358', YES, 1),
+VALUES ('42519862358', '1', 1),
   -- 1
-  ('46603592128', YES, 2),
+  ('46603592128', '1', 2),
   -- 2
-  ('84166501982', NO, 3),
+  ('84166501982', '0', 3),
   -- 3
-  ('19726485225', YES, 4);
--- 4
+  ('19726485225', '1', 4),
+  -- 4
+  ('12486525482', '1', 4),
+  ('66507824902', '1', 4),
+  ('49925812673', '1', 4);
 INSERT INTO pleito (nome, quantidade_votos)
 VALUES (
     'Eleições Gerais para o Estado Brasileiro',
@@ -638,7 +641,7 @@ VALUES (
     'Eleições Gerais para o Estado Brasileiro',
     2022
   );
-INSERT INTO doadores (cpf, valor_doação, candidatura)
+INSERT INTO doadores (cpf, valor_doacao, candidatura)
 VALUES ('75395102846', 85000, 1),
   ('45619732808', 270000, 2),
   ('48265913870', 1000000, 3),
@@ -646,8 +649,8 @@ VALUES ('75395102846', 85000, 1),
 INSERT INTO empresa (
     cnpj,
     nome,
-    localização,
-    valor_doação,
+    localizacao,
+    valor_doacao,
     candidatura
   )
 VALUES (
@@ -729,7 +732,7 @@ VALUES -- Integrantes Equipes de Apoio 1:
   ('12398745608', 2),
   ('98745632109', 2),
   ('65412398710', 2),
-  ('74185296311', 2),
+  -- ('74185296311', 2),
   ('23741589612', 2),
   -- Intehrantes da Equipe 3:
   ('96385274113', 3),
