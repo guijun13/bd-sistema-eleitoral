@@ -609,7 +609,8 @@ INSERT INTO candidatura (
     cargo,
     equipe_de_apoio,
     pleito,
-    ano
+    ano,
+    nro_votos
   )
 VALUES (
     '42519862358',
@@ -617,7 +618,8 @@ VALUES (
     1,
     1,
     'Eleições Gerais para o Estado Brasileiro',
-    2022
+    2022,
+    51988016
   ),
   (
     '46603592128',
@@ -625,7 +627,8 @@ VALUES (
     1,
     2,
     'Eleições Gerais para o Estado Brasileiro',
-    2023
+    2022,
+    25994008
   ),
   (
     '84166501982',
@@ -633,7 +636,8 @@ VALUES (
     1,
     3,
     'Eleições Gerais para o Estado Brasileiro',
-    2024
+    2018,
+    19495506
   ),
   (
     '19726485225',
@@ -641,7 +645,8 @@ VALUES (
     1,
     4,
     'Eleições Gerais para o Estado Brasileiro',
-    2025
+    2018,
+    58486518
   );
 INSERT INTO doadores (cpf, valor_doacao, candidatura)
 VALUES ('75395102846', 85000, 1),

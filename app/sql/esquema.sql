@@ -65,6 +65,7 @@ CREATE TABLE candidatura (
   equipe_de_apoio SERIAL,
   pleito VARCHAR(255),
   ano NUMERIC,
+  nro_votos NUMERIC,
   CONSTRAINT candidatura_pk PRIMARY KEY (id_candidatura),
   CONSTRAINT candidatuta_fk_1 FOREIGN KEY (candidato_principal) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
   CONSTRAINT candidatuta_fk_2 FOREIGN KEY (candidato_vice) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
