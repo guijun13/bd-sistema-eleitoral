@@ -11,10 +11,10 @@ cur = conn.cursor()
 
 def inserir_individuo():
     print("\nInserindo individuo")
-    cpf = (input(f'{"Digite o cpf da individuo"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
+    cpf = (input(f'{"Digite o CPF da individuo"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
     nome = input('Digite o nome da individuo: ')
-    tipo = (input(f'{"Digite o tipo da pessoa"} {colored("()", "grey")}: '))
-    rg = input('Digite o rg da pessoa: ')
+    tipo = (input(f'{"Digite o tipo do individuo"} {colored("(Candidato, Doador ou Participante equipe de apoio)", "grey")}: '))
+    rg = input('Digite o rg do individuo: ')
     data_de_nascimento = (input(f'{"Digite a data de nascimento individuo"} {colored("(ex: YYYY-MM-DD)", "grey")}: '))
     nacionalidade = input('Digite a nacionalidade do individuo: ')
     titulo_eleitor = input('Digite o titulo de eleitor do individuo: ')
@@ -25,7 +25,7 @@ def inserir_processo_judicial():
     print("\nInserindo processo judicial")
     nro_processo = input('Digite o numero do processo: ')
     data_do_processo = (input(f'{"Digite a data do processo"} {colored("(ex: YYYY-MM-DD)", "grey")}: '))
-    acusado = (input(f'{"Digite o cpf do acusado"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
+    acusado = (input(f'{"Digite o CPF do acusado"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
 
     functions.inserir_processo_judicial(nro_processo, data_do_processo, acusado)
 
@@ -46,8 +46,8 @@ def inserir_programa_partido():
 
 def inserir_candidato():
     print("\nInserindo candidato")
-    cpf = (input(f'{"Digite o cpf do candidato"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
-    vice = (input(f'{"Digite se o candidato é vice"} {colored("(Y/N)", "grey")}: '))
+    cpf = (input(f'{"Digite o CPF do candidato"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
+    vice = (input(f'{"Digite se o candidato é vice"} {colored("(1 para sim/0 para nao)", "grey")}: '))
     partido = input('Digite o ID do partido: ')
 
     functions.inserir_candidato(cpf, vice, partido)
@@ -75,9 +75,9 @@ def inserir_equipe_de_apoio():
 
 def inserir_candidatura():
     print("\nInserindo candidatura")
-    candidato_principal = input('Digite o CPF do candidato principal: ')
-    candidato_vice = input('Digite o CPF do candidato vice: ')
-    cargo = input('Digite o Id do cargo: ')
+    candidato_principal = (input(f'{"Digite o CPF do candidato principal"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
+    candidato_vice = (input(f'{"Digite o CPF do candidato vice"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
+    cargo = input('Digite o ID do cargo: ')
     equipe_de_apoio = input('Digite o ID da equipe de apoio: ')
     pleito = input('Digite o nome do pleito: ')
     
@@ -85,7 +85,7 @@ def inserir_candidatura():
 
 def inserir_doadores():
     print("\nInserindo doador")
-    cpf = input('Digite o cpf do individuo: ')
+    cpf = (input(f'{"Digite o CPF do doador"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
     valor_doacao = input('Digite o valor da doação: ')
     candidatura = input('Digite o Id da candidatura que corresponde a doação: ')
     
@@ -103,7 +103,7 @@ def inserir_empresa():
 
 def inserir_participantes_equipe_de_apoio():
     print("\nInserindo participantes equipe de apoio")
-    cpf = input('Digite o cpf do individuo: ')
+    cpf = (input(f'{"Digite o CPF do participante da equipe de apoio"} {colored("(ex: 123.123.123-AA)", "grey")}: '))
     equipe_de_apoio = input('Digite o ID da equipe de apoio: ')
     
     functions.inserir_participantes_equipe_de_apoio(cpf, equipe_de_apoio)
