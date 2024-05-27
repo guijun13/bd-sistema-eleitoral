@@ -7,7 +7,8 @@ CREATE TABLE individuo (
   nacionalidade VARCHAR(100),
   titulo_eleitor CHAR(12),
   CONSTRAINT individuo_pk PRIMARY KEY (cpf),
-  CONSTRAINT individuo_sk unique (titulo_eleitor)
+  CONSTRAINT individuo_sk UNIQUE (titulo_eleitor)
+  CONSTRAINT individuo_ck CHECK (tipo IN('Candidato', 'Doador', 'Participante equipe de apoio'))
 );
 CREATE TABLE processo_judicial (
   nro_processo CHAR(25),
