@@ -633,7 +633,7 @@ VALUES (
   (
     '84166501982',
     NULL,
-    1,
+    3,
     3,
     'Eleições Gerais para o Estado Brasileiro',
     2018,
@@ -642,7 +642,7 @@ VALUES (
   (
     '19726485225',
     '49925812673',
-    1,
+    3,
     4,
     'Eleições Gerais para o Estado Brasileiro',
     2018,
