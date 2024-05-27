@@ -300,7 +300,7 @@ VALUES (
     '987123654012'
   ),
   (
-    '74185296311',
+    '74185296312',
     'Mariana Beatriz Oliveira',
     'Física',
     '741852964',
@@ -554,12 +554,12 @@ VALUES (
     '84166501982'
   );
 -- Fernanda Cristina Lima
-INSERT INTO partido (nome, abreviação, nro_integrantes) --Preencher
+INSERT INTO partido (nome, abreviacao, nro_integrantes) --Preencher
 VALUES ('Partido do Trabalho Intenso', 'PTI', 13),
   ('Partido Azul', 'PA', 11),
   ('Partido Brasileiro Político', 'PBP', 8),
   ('Partido da Liberdade Cinza', 'PLC', 14);
-INSERT INTO programa_partido (partido, descrição) -- Preencher
+INSERT INTO programa_partido (partido, descricao) -- Preencher
 VALUES (
     1,
     'Somos um partido que busca a dignidade no trabalho, sendo ele político ou laboroso!'
