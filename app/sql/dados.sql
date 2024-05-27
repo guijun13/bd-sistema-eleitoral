@@ -595,7 +595,9 @@ VALUES (
   );
 INSERT INTO cargo (titulo, tipo)
 VALUES ('Presidente', 'Federal'),
-  ('Vice-Presidente', 'Federal');
+  ('Vice-Presidente', 'Federal'),
+  ('Governador', 'Estadual'),
+  ('Vice-Governador', 'Estadual');
 INSERT INTO equipe_de_apoio (nome, nro_membros)
 VALUES ('Equipe 1', 11),
   ('Equipe 2', 12),
@@ -623,7 +625,7 @@ VALUES (
     1,
     2,
     'Eleições Gerais para o Estado Brasileiro',
-    2022
+    2023
   ),
   (
     '84166501982',
@@ -631,7 +633,7 @@ VALUES (
     1,
     3,
     'Eleições Gerais para o Estado Brasileiro',
-    2022
+    2024
   ),
   (
     '19726485225',
@@ -639,7 +641,7 @@ VALUES (
     1,
     4,
     'Eleições Gerais para o Estado Brasileiro',
-    2022
+    2025
   );
 INSERT INTO doadores (cpf, valor_doacao, candidatura)
 VALUES ('75395102846', 85000, 1),
