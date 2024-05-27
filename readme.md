@@ -2,7 +2,7 @@
 
 SCC0240 - Base de dados - Prof. Jose Fernando Rodrigues Junior
 - Guilherme Jun Y. Grillo - 11208350
-- Leonardo Leitão Zanardo - 
+- Leonardo Leitão Zanardo - 11814231
 - Lucas Issao Omati - 13673090
 - Samuel Victorio Bernacci - 12703455
 
