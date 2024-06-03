@@ -8,13 +8,7 @@ CREATE TABLE individuo (
 	titulo_eleitor CHAR(12),
 	CONSTRAINT individuo_pk PRIMARY KEY (cpf),
 	CONSTRAINT individuo_sk UNIQUE (titulo_eleitor),
-	CONSTRAINT individuo_ck CHECK (
-		tipo IN(
-			'Candidato',
-			'Doador',
-			'Participante equipe de apoio'
-		)
-	)
+	CONSTRAINT individuo_ck CHECK (tipo IN('Candidato', 'Doador', 'Participante equipe de apoio'))
 );
 CREATE TABLE processo_judicial (
 	nro_processo CHAR(25),
@@ -76,10 +70,8 @@ CREATE TABLE candidatura (
 	CONSTRAINT candidatuta_fk_1 FOREIGN KEY (candidato_principal) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT candidatuta_fk_2 FOREIGN KEY (candidato_vice) REFERENCES candidato(cpf) ON DELETE CASCADE ON UPDATE CASCADE,
 	CONSTRAINT candidatuta_fk_3 FOREIGN KEY (cargo) REFERENCES cargo(id_cargo) ON DELETE CASCADE ON UPDATE CASCADE,
-	CONSTRAINT candidatuta_fk_4 FOREIGN KEY (equipe_de_apoio) REFERENCES equipe_de_apoio(id_equipe) ON DELETE
-	SET NULL ON UPDATE CASCADE,
-		CONSTRAINT candidatuta_fk_5 FOREIGN KEY (pleito) REFERENCES pleito(nome) ON DELETE
-	SET NULL ON UPDATE CASCADE
+	CONSTRAINT candidatuta_fk_4 FOREIGN KEY (equipe_de_apoio) REFERENCES equipe_de_apoio(id_equipe) ON DELETE SET NULL ON UPDATE CASCADE,
+	CONSTRAINT candidatuta_fk_5 FOREIGN KEY (pleito) REFERENCES pleito(nome) ON DELETE SET NULL ON UPDATE CASCADE
 );
 CREATE TABLE doadores (
 	cpf CHAR(11),
