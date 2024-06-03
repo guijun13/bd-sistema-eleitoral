@@ -45,6 +45,7 @@ pip install -r requirements.txt
   - `create.py`: criar tabelas do `esquema.sql`
   - `insert.py`: inserir dados do `dados.sql`
   - `query.py`: realizar consultas do `consultasTotais.sql` e `consultasEspecificas.sql`
+  - `delete.py`: deletar todos os dados inseridos (não da drop nas tabela)
   - `src.py`: inserir manualmente dados nas tabelas
 ```
 python3 <nome-arquivo.py>
