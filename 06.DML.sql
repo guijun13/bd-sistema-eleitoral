@@ -117,8 +117,6 @@ VALUES
     ('84166501982', NULL, 3, 3, 'Eleições Gerais para o Estado Brasileiro', 2018, 19495506),
     ('19726485225', '49925812673', 3, 4, 'Eleições Gerais para o Estado Brasileiro', 2018, 58486518);
 
-
-
 INSERT INTO doadores (cpf, valor_doação, candidatura)
 VALUES 
     ('75395102846', 85000, 1),
